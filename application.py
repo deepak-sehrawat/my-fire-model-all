@@ -11,8 +11,8 @@ linear=pickle.load(open("my fire model all/models/fire_linear.plk","rb"))
 column_names=list(scaler.feature_names_in_)
 # print(column_names) #hello update
 
-app = Flask(__name__)
-
+application = Flask(__name__)
+app=application
 @app.route('/home', methods=['GET', 'POST'])
 def run_python_function():
     result="NONE"
