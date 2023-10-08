@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Form</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>User Input Form</h1>
+    <form method="POST" action="{{ url_for('run_python_function')}}" >
+        <table>
+            <thead>
+                <tr>
+                    <th>Column Name</th>
+                    <th>User Input</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for column in column_names %}
+                <tr>
+                    <td>{{ column }}</td>
+                    <td><input required type="number" step="0.001" name="{{ column }}"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
