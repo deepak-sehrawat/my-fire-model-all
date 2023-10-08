@@ -5,8 +5,8 @@ import pandas as pd
 import pickle
 import sys
 
-scaler=pickle.load(open("/my fire model all /models/fire_scaler.plk","rb"))
-linear=pickle.load(open("/my fire model all /models/fire_linear.plk","rb"))
+scaler=pickle.load(open("my fire model all/models/fire_scaler.plk","rb"))
+linear=pickle.load(open("my fire model all/models/fire_linear.plk","rb"))
 
 column_names=list(scaler.feature_names_in_)
 # print(column_names) #hello update
