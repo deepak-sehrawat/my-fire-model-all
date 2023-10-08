@@ -13,6 +13,9 @@ column_names=list(scaler.feature_names_in_)
 
 application = Flask(__name__)
 app=application
+@app.route("/")
+def home():
+    return render_template("home.html")
 @app.route('/home', methods=['GET', 'POST'])
 def run_python_function():
     result="NONE"
